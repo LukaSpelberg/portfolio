@@ -437,3 +437,9 @@ video {
 	
 
 }
+
+@media (max-width: 768px) {
+	video {
+		content: url('../videos/loaderMobiel.webm');
+	}
+}

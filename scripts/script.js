@@ -1,6 +1,6 @@
 
   
-  window.addEventListener('load', () => {
+  window.addEventListener('DOMContentLoaded', () => {
     const preloader = document.querySelector('.preLoader');
     const mainContent = document.querySelector('video');
 
