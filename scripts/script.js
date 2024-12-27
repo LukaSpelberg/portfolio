@@ -1,27 +1,18 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const preloader = document.querySelector('.preLoader');
-  const video = document.querySelector('.preLoader video');
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preLoader');
+    const mainContent = document.querySelector('header footer main');
+    const video = document.querySelector('.preLoader video');
 
-  // Function to set the video source based on screen width
-  const setVideoSource = () => {
-    if (window.innerWidth < 1000) {
-      video.src = 'videos/loaderMobile.webm'; // Mobile version of the video
-      console.log('Mobile video source set');
-    } else {
-      video.src = 'videos/loaderFinal.webm'; // Desktop version of the video
-      console.log('Desktop video source set');
+
+    // Detect if the user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        video.src = '/videos/loaderMobiel.webm'; 
     }
-    video.load(); // Force the video to reload with the new source
-  };
 
-  // Set the initial video source
-  setVideoSource();
-
-  // Update the video source on window resize
-  window.addEventListener('resize', setVideoSource);
-
-  setTimeout(() => {
-    preloader.style.display = 'none';
-    video.style.display = 'block';
-  }, 5000); 
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      mainContent.style.display = 'block';
+    }, 5000); 
 });
