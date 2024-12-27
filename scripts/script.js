@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
     if (isMobile) {
-      video.src = '../videos/loaderMobiel.webm'
+      video.src = video.src = './videos/loaderMobiel.webm'
     }
 
     setTimeout(() => {
