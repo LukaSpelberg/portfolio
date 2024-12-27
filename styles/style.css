@@ -30,6 +30,7 @@
 
 body {
 	background-image: url('../images/background.jpg');
+	overflow-x: hidden;
 }
 
 
@@ -419,7 +420,7 @@ video {
 	.sterktes {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 15em;
+		margin-bottom: 5em;
 		gap: 1.5em;
 	}
 	
@@ -441,9 +442,9 @@ video {
 
 
 	.sterktes img {
-		width: 400%;
-		height: auto;
-		position: absolute;
+		width: 350%;
+		transform: translateY(-70%);
+		margin-bottom: -130%;
 	}
 	
 	footer p {
@@ -455,8 +456,8 @@ video {
 
 @media (max-width: 768px) {
     .preLoader video {
-        width: auto;
-        height: auto;
+       width: 100%;
+	   height: 100%;
     }
 }
 
