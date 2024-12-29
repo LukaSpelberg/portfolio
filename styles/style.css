@@ -447,7 +447,6 @@ nav ul {
 	max-width: 50%;
 	justify-self: start; 
 	align-self: end;
-	padding: 0.5em; 
 	position: relative;
 	z-index: 3;
 	padding: 5em;
@@ -669,7 +668,6 @@ nav ul {
     }
 
 	.caseMain article p {
-		max-width: 100%;
 		font-size: 1em;
 	}
 
@@ -683,4 +681,32 @@ nav ul {
 
 	
 }
+
+@media (max-width: 1200px) {
+    .caseMain p::before {
+        display: none;
+    }
+
+	.caseMain article p {
+		max-width: 100%;
+		grid-row: 2;
+		margin-bottom: 0;
+		padding: 2em;
+	}
+
+	.caseMain article img {
+		grid-row: 1;
+	}
+
+	.caseMain article {
+		background-color: var(--rood);
+		background-image: url('../images/grungebg.png');
+		background-size: 50%;
+		
+	}
+
+
+
+}
+
 
