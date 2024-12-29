@@ -59,6 +59,7 @@ footer p {
 }
 
 
+
 .preLoader {
 	position: fixed;
 	top: 0;
@@ -92,11 +93,35 @@ video {
 }
 
 
+nav {
+	display: flex;
+	justify-content: flex-end;
+	grid-column: 1 / -1;
+	grid-row: 1;
+
+}
+
+nav ul {
+	display: flex;
+	gap: 2em;
+}
+
+ li a {
+	display: block;
+	text-decoration: none;
+	color: var(--color-background);
+	font-family: var(--font);
+	font-weight: 600;
+	background-color: var(--goud);
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	padding: .5em 2.5em .5em 2.5em;
+}
+
 .mainHeader {
 	display: grid;
 	grid-template-columns: 1fr minmax(0rem, 40rem);
 	grid-template-rows: auto auto;	
-	padding: 5em;
+	padding: 3em 5em 5em 5em;
     gap: 2em; 
 }
 
@@ -106,13 +131,13 @@ video {
 }
 
 .mainHeader img {
-	grid-row: 1 / 3;
+	grid-row: 2 / 3;
  	max-width: 100%; 
 }
 
 .mainHeader h1 {
 	grid-column: 2;
-	grid-row: 1;
+	grid-row: 2;
 	font-size: 3em;
 }
 
@@ -314,10 +339,145 @@ video {
     opacity: 85%;
 }
 
+.caseHeader {
+	display: grid;
+	padding: 2em 5em 25em 5em;
+	position: relative;
+	overflow: hidden;
+}
+
+.caseHeader nav {
+	grid-column: 2;
+	grid-row: 1;
+	padding-bottom: 7em;
+}
+
+.caseHeader .caseText {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.caseHeader img {
+	grid-column: 2;
+	grid-row: 2;
+	width: 100%;
+	height: auto;
+}
+
+.caseText {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.caseText h1 {
+	position: relative;
+	font-size: 3em;
+	padding-bottom: .2em;
+}
 
 
+.caseText h1::before {
+	content: "";
+	background-color: var(--goud);
+	position: absolute;
+	height: 2px;
+	width: 50%;
+	bottom: 0;
+	margin-top: 1em;
+}
 
 
+.caseText h1::after{
+	content: "• 2024";
+	font-weight: 400;
+	font-size: .5em;
+	position: absolute;
+	top: .6em;
+	margin-left: .5em;
+}
+
+.caseHeader::before {
+	content: url('../images/rodeSplatter.svg');
+	position: absolute;
+	z-index: -1;
+	top: -3em;
+	opacity: 95%;
+	
+}
+
+.tags p {
+	display: inline;
+	background-color: var(--goud);
+	border-radius: 0.375em;
+	max-width: fit-content;
+	padding: .5em;
+}
+
+.tags {
+	padding: 1em 1em 1em 0;
+}
+
+.caseText p {
+	font-size: 1.5em;
+}
+
+.caseMain article {
+	display: grid;
+	grid-template-rows: auto;
+	align-items: center;
+	max-width: 80%;
+	margin: 0 auto;
+	margin-bottom: 10em;
+	position: relative;
+	overflow: visible;
+}
+
+.caseMain article img {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+	width: 100%; 
+	height: 100%; 
+	z-index: 1
+}
+
+.caseMain article p {
+	grid-column: 1;
+	grid-row: 1; 
+	max-width: 50%;
+	justify-self: start; 
+	align-self: end;
+	padding: 0.5em; 
+	position: relative;
+	z-index: 3;
+	padding: 5em;
+	font-size: 1.2em;
+	margin-bottom: 6em;
+	overflow: visible;
+}
+
+.caseMain p::before {
+	content: url('../images/paintSplatter.svg');
+	position: absolute;
+	z-index: -1;
+	left: -7em;
+	top: -9em;
+	width: auto;
+}
+
+.caseMain article:nth-of-type(2) p::before {
+	content: url('../images/paintSplatter2.svg');
+	top: -15em;
+}
+
+.caseMain article:first-of-type p {
+	justify-self: end;
+}
+
+.caseMain article:first-of-type::before{
+	right: -8em;
+	justify-self: end;
+}
 
 
 
@@ -331,7 +491,7 @@ video {
     }
 
     .mainHeader img {
-        grid-row: 1;
+        grid-row: 2;
         max-width: 100%;
     }
 
@@ -451,7 +611,67 @@ video {
 	footer p {
 		text-align: center;
 	}
+
+	.caseHeader p {
+		font-size: 1em;
+	}
+
+	.caseHeader h1 {
+		font-size: 2.5em;
+	}
 	
+	.caseHeader {
+        display: flex;
+        flex-direction: column;
+		padding: 0;
+    }
+
+	.caseText {
+		gap: .5em;
+		padding: 2em 2em 0em 2em;
+	}
+
+	.caseHeader nav {
+		padding: 5em .5em 0 0;
+		transform: scale(0.9);
+	}
+
+	.caseHeader h1::before {
+		width: 70%;
+	}
+
+	 nav ul {
+		gap: 0em;
+	}
+
+    .caseHeader h1 {
+        order: 1;
+        font-size: 2em;
+    }
+
+    .caseHeader .tags {
+        order: 2;
+        display: flex;
+        gap: 1em;
+    }
+
+    .caseHeader img {
+        order: 3;
+        width: 100%;
+        height: auto;
+		padding-bottom: 8em;
+		transform: scale(0.8);
+    }
+
+    .caseHeader p {
+        order: 4;
+        font-size: 0.875em;
+    }
+
+	.caseMain article p {
+		max-width: 100%;
+		font-size: 1em;
+	}
 
 }
 
@@ -460,5 +680,7 @@ video {
        width: 100%;
 	   height: 100%;
     }
+
+	
 }
 
