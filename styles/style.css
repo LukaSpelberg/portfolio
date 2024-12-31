@@ -469,15 +469,15 @@ nav ul {
 	top: -15em;
 }
 
-.caseMain article:first-of-type p {
-	justify-self: end;
+
+.caseMain article.rechts p {
+    justify-self: end;
 }
 
-.caseMain article:first-of-type::before{
-	right: -8em;
-	justify-self: end;
+.caseMain article.rechts::before {
+    right: -8em;
+    justify-self: end;
 }
-
 
 
 
@@ -671,6 +671,13 @@ nav ul {
 		font-size: 1em;
 	}
 
+	.caseMain {
+		margin-top: 5em;
+	}
+
+	.caseMain article {
+		margin-bottom: 5em;
+	}
 }
 
 @media (max-width: 768px) {
