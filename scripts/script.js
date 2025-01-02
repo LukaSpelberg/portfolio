@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preLoader')
-    const mainContent = document.querySelector('header footer main')
+    const mainContent = document.querySelectorAll('header, footer, main')
     const video = document.querySelector('video')
 
 
@@ -12,7 +12,9 @@ window.addEventListener('load', () => {
     }
 
     setTimeout(() => {
+      document.body.classList.add('background');
+      mainContent.forEach(element => element.classList.add('display'));
       preloader.style.display = 'none'
-      mainContent.style.display = 'block'
+      
     }, 5000)
 })
