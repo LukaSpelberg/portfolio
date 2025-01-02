@@ -29,12 +29,10 @@
 }
 
 header, footer, main {
-	visibility: hidden;
     opacity: 0;
 }
 
 .display {
-    visibility: visible;
     opacity: 1;
 }
 
