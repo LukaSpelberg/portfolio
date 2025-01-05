@@ -25,6 +25,7 @@
 	--zwart: #000000;
 	--rood: #F3224B;
 	--goud: #CEBA5A;
+	--zwartopacity: rgba(0, 0, 0, 0.5);
 
 }
 
@@ -243,6 +244,11 @@ nav ul {
 	padding: 2em;
 }
 
+.projecten article:nth-of-type(4) {
+	background-color: var(--zwartopacity);
+	padding: 2rem;
+}
+
 .projecten article img {
 	grid-column: -1;
 	grid-row: 1 / 4;
@@ -446,6 +452,7 @@ nav ul {
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
+	min-height: 52px;
 	
 }
 
@@ -472,6 +479,10 @@ nav ul {
 
 .caseText p {
 	font-size: 1.5em;
+}
+
+.caseHeader ul {
+	display: flex;
 }
 
 .caseMain article {
@@ -714,11 +725,12 @@ nav ul {
         height: auto;
 		padding-bottom: 8em;
 		transform: scale(0.8);
+		margin-bottom: 2em;
     }
 
     .caseHeader p {
         order: 4;
-        font-size: 0.875em;
+        font-size: 1em;
     }
 
 	.caseHeader section a {
@@ -726,6 +738,26 @@ nav ul {
 		font-size: 1em;
 		transform: scale(0.7);
 	}
+ 
+	.caseHeader .tweeTags {
+		order: 5;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+	}
+	.caseHeader .tweeTags a{
+		padding: .5em 2em .5em 2em;
+		transform: scale(1);
+	}
+
+	.caseHeader .tweeTags svg:first-of-type {
+		display: none;
+	}
+
+
+
+	
 
 	.caseMain article p {
 		font-size: 1em;
