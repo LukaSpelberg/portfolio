@@ -14,9 +14,9 @@ window.addEventListener('load', () => {
     let backgroundTimeout = 1000;
     let preloaderTimeout = 2000;
 
+    console.log('document.location.pathname:', document.location.pathname);
 
-        
-    if (document.location.pathname.includes('index.html')) {
+    if (document.location.pathname === '/' || document.location.pathname.endsWith('index.html')) {
         backgroundTimeout = 2000; 
         preloaderTimeout = 5000;  
 
