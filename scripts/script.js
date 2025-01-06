@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     }
 
     // Determine the timeout durations based on the document
-    let backgroundTimeout = 1000;
+    let backgroundTimeout = 500;
     let preloaderTimeout = 2000;
 
     console.log('document.location.pathname:', document.location.pathname);
