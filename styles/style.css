@@ -771,6 +771,11 @@ nav ul {
 		margin-bottom: 5em;
 		max-width: 100%;
 	}
+
+	.langeTitel::after {
+		top: 2em !important;
+		padding-top: .6em;
+	}
 }
 
 @media (max-width: 768px) {
