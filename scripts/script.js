@@ -1,37 +1,33 @@
+const video = document.querySelector('video')
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+if (isMobile) {
+    video.src = 'https://lukaspelberg.github.io/portfolio/videos/loader2Mobiel.mp4'
+}
+
 window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preLoader');
-    const mainContent = document.querySelectorAll('header, footer, main');
-    const video = document.querySelector('video');
+    const preloader = document.querySelector('.preLoader')
+    const mainContent = document.querySelectorAll('header, footer, main')
 
-    // Detect if the user is on a mobile device
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    let backgroundTimeout = 500
+    let preloaderTimeout = 2000
 
-    if (isMobile) {
-        video.src = 'https://lukaspelberg.github.io/portfolio/videos/loader2Mobiel.mp4';
-    }
-
-    // Determine the timeout durations based on the document
-    let backgroundTimeout = 500;
-    let preloaderTimeout = 2000;
-
-    const path = document.location.pathname;
+    const path = document.location.pathname
     if (path === '/' || path === '/portfolio/' || path.endsWith('index.html')) {
-        backgroundTimeout = 2000; 
-        preloaderTimeout = 5000;  
+        backgroundTimeout = 2000
+        preloaderTimeout = 5000
 
         if (isMobile) {
-            video.src = 'https://lukaspelberg.github.io/portfolio/videos/loaderMobiel.webm';
+            video.src = 'https://lukaspelberg.github.io/portfolio/videos/loaderMobiel.webm'
         }
     }
 
-    // Add background and display classes after the specified background timeout
     setTimeout(() => {
-        document.body.classList.add('background');
-        mainContent.forEach(element => element.classList.add('display'));
-    }, backgroundTimeout);
+        document.body.classList.add('background')
+        mainContent.forEach(element => element.classList.add('display'))
+    }, backgroundTimeout)
 
-    // Hide preloader after the specified preloader timeout
     setTimeout(() => {
-        preloader.style.display = 'none';
-    }, preloaderTimeout);
-});
+        preloader.style.display = 'none'
+    }, preloaderTimeout)
+})
