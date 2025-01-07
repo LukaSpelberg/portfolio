@@ -46,6 +46,14 @@ body {
 	overflow-x: hidden;
 }
 
+footer a {
+	color: var(--color-background);
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
 
 p {
 	font-family: var(--font);
@@ -287,6 +295,18 @@ nav ul {
 
 .projecten article a:hover {
 	clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+}
+
+a {
+	transition: .6s ease;
+}
+
+a:hover {
+	clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+}
+
+footer a:hover {
+	clip-path: none;
 }
 
 .sterktes {
@@ -667,8 +687,8 @@ nav ul {
 
 	.sterktes img {
 		width: 350%;
-		transform: translateY(-70%);
-		margin-bottom: -130%;
+		transform: translateY(-85%);
+		margin-bottom: -160%;
 	}
 	
 	footer p {
@@ -756,16 +776,20 @@ nav ul {
 	}
 
 
+	footer {
+		padding: 2em;
+		gap: 1em;
+	}
 
+	footer svg {
+		width: 2em;
+	}
 	
 
 	.caseMain article p {
 		font-size: 1em;
 	}
 
-	.caseMain {
-		margin-top: 5em;
-	}
 
 	.caseMain article {
 		margin-bottom: 5em;
