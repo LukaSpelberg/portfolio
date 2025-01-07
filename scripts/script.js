@@ -14,9 +14,8 @@ window.addEventListener('load', () => {
     let backgroundTimeout = 500;
     let preloaderTimeout = 2000;
 
-
-
-    if (document.location.pathname === '/' || document.location.pathname.endsWith('index.html') || document.location.pathname.endsWith('portfolio/')) {
+    const path = document.location.pathname;
+    if (path === '/' || path === '/portfolio/' || path.endsWith('index.html')) {
         backgroundTimeout = 2000; 
         preloaderTimeout = 5000;  
 
