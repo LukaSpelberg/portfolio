@@ -596,7 +596,7 @@ footer ul li:first-of-type a{
 
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1800px) {
 	.caseMain article p {
         max-width: 35%;
     }
