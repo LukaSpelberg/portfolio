@@ -594,8 +594,11 @@ footer ul li:first-of-type a{
 		margin-right: 15em;
 	}
 
-	.caseMain p {
-		max-width: 40%;
+}
+
+@media (min-width: 2000px) {
+	.caseMain article p {
+        max-width: 35%;
     }
 }
 
