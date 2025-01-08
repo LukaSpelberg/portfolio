@@ -563,6 +563,22 @@ footer a:hover {
 }
 
 
+footer a {
+	clip-path: none;
+	background-color: transparent;
+}
+
+footer ul {
+	display: flex;
+	align-items: center;
+}
+
+
+@media (max-width: 1500px) {
+	.sterktes p {
+		font-size: 1em;
+	}
+}
 
 
 @media (max-width: 968px) {
