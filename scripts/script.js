@@ -2,7 +2,7 @@ const video = document.querySelector('video')
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
 if (isMobile) {
-    video.src = 'https://lukaspelberg.github.io/portfolio/videos/loader2Mobiel.mp4'
+    video.src = '../videos/loader2Mobiel.mp4'
 }
 
 window.addEventListener('load', () => {
@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
         preloaderTimeout = 5000
 
         if (isMobile) {
-            video.src = 'https://lukaspelberg.github.io/portfolio/videos/loaderMobiel.webm'
+            video.src = '../videos/loaderMobiel.webm'
         }
     }
 
