@@ -253,10 +253,19 @@ nav ul {
 }
 
 .projecten article:nth-of-type(4) {
-	background-color: var(--zwartopacity);
+	background-color: var(--magenta);
 	padding: 2rem;
 }
 
+.projecten article:nth-of-type(5) {
+	background-color: var(--zwart);
+	padding: 2rem;
+}
+
+.projecten article:nth-of-type(6) {
+	background-color: var(--zwartopacity);
+	padding: 2rem;
+}
 .projecten article img {
 	grid-column: -1;
 	grid-row: 1 / 4;
@@ -505,6 +514,10 @@ footer a:hover {
 	display: flex;
 }
 
+main {
+	overflow: hidden;
+}
+
 .caseMain article {
 	display: grid;
 	grid-template-rows: auto;
@@ -527,7 +540,7 @@ footer a:hover {
 .caseMain article p {
 	grid-column: 1;
 	grid-row: 1; 
-	max-width: 50%;
+	max-width: 45%;
 	justify-self: start; 
 	align-self: end;
 	position: relative;
